@@ -1,4 +1,4 @@
-package com.example.nestedlist.holder
+package com.example.nestedlist
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

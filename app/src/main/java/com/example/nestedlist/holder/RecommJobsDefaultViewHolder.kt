@@ -3,8 +3,8 @@ package com.example.nestedlist.holder
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nestedlist.data.Jobs
 import com.example.nestedlist.adapter.JobsDefaultAdapter
+import com.example.nestedlist.data.JobsDefault
 import com.example.nestedlist.data.RecommJobs
 import com.example.nestedlist.databinding.ItemRecommJobsDefaultBinding
 
@@ -12,18 +12,18 @@ import com.example.nestedlist.databinding.ItemRecommJobsDefaultBinding
  * @author Perry Lance
  * @since 2022-04-16 Created
  */
-class RecommJobsViewHolder(private val binding: ItemRecommJobsDefaultBinding) :
+class RecommJobsDefaultViewHolder(private val binding: ItemRecommJobsDefaultBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    private val jobsAdapter = JobsDefaultAdapter().apply {
+    private val jobsDefaultAdapter = JobsDefaultAdapter().apply {
         submitList(
             listOf(
-                Jobs("1"),
-                Jobs("2"),
-                Jobs("3"),
-                Jobs("4"),
-                Jobs("5"),
-                Jobs("6")
+                JobsDefault("1"),
+                JobsDefault("2"),
+                JobsDefault("3"),
+                JobsDefault("4"),
+                JobsDefault("5"),
+                JobsDefault("6")
             )
         )
     }
@@ -36,7 +36,7 @@ class RecommJobsViewHolder(private val binding: ItemRecommJobsDefaultBinding) :
                 LinearLayoutManager.HORIZONTAL,
                 false
             )
-            adapter = jobsAdapter
+            adapter = jobsDefaultAdapter
             PagerSnapHelper().attachToRecyclerView(this)
         }
     }

@@ -7,7 +7,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nestedlist.adapter.RecommJobsAdapter
 import com.example.nestedlist.databinding.ActivityMainBinding
-import com.example.nestedlist.holder.RecommJobsViewModel
 import com.example.nestedlist.utils.observe
 import dagger.hilt.android.AndroidEntryPoint
 

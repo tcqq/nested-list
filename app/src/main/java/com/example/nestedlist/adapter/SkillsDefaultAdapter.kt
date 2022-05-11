@@ -5,19 +5,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nestedlist.data.RecommSkillsInside
-import com.example.nestedlist.databinding.ItemRecommSkillsInsideBinding
+import com.example.nestedlist.data.SkillsDefault
+import com.example.nestedlist.databinding.ItemSkillsDefaultBinding
 
 /**
  * @author Perry Lance
  * @since 2021-04-25 Created
  */
-class RecommSkillsInsideAdapter : ListAdapter<RecommSkillsInside, RecommSkillsInsideAdapter.ViewHolder>(
-    RecommSkillsInsideDiffCallback()
+class SkillsDefaultAdapter : ListAdapter<SkillsDefault, SkillsDefaultAdapter.ViewHolder>(
+    SkillsDefaultDiffCallback()
 ) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        ItemRecommSkillsInsideBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        ItemSkillsDefaultBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -25,26 +25,26 @@ class RecommSkillsInsideAdapter : ListAdapter<RecommSkillsInside, RecommSkillsIn
     }
 
     inner class ViewHolder(
-        private val binding: ItemRecommSkillsInsideBinding
+        private val binding: ItemSkillsDefaultBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: RecommSkillsInside) = with(binding) {
+        fun bind(item: SkillsDefault) = with(binding) {
 //            title1.text = item.name1
         }
     }
 
-    class RecommSkillsInsideDiffCallback : DiffUtil.ItemCallback<RecommSkillsInside>() {
+    class SkillsDefaultDiffCallback : DiffUtil.ItemCallback<SkillsDefault>() {
 
         override fun areItemsTheSame(
-            oldItem: RecommSkillsInside,
-            newItem: RecommSkillsInside
+            oldItem: SkillsDefault,
+            newItem: SkillsDefault
         ): Boolean {
             return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(
-            oldItem: RecommSkillsInside,
-            newItem: RecommSkillsInside
+            oldItem: SkillsDefault,
+            newItem: SkillsDefault
         ): Boolean {
             return oldItem.id == newItem.id
         }

@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
                 tools:itemCount="1"
-                tools:listitem="@layout/item_recomm_skills_inside" />
+                tools:listitem="@layout/item_skills_default" />
 
         </com.example.nestedlist.utils.NestedScrollableHost>
 

@@ -2,29 +2,29 @@ package com.example.nestedlist.holder
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nestedlist.data.RecommSkillsInside
-import com.example.nestedlist.adapter.RecommSkillsInsideAdapter
+import com.example.nestedlist.adapter.SkillsDefaultAdapter
 import com.example.nestedlist.data.RecommJobs
-import com.example.nestedlist.databinding.ItemRecommSkillsBinding
+import com.example.nestedlist.data.SkillsDefault
+import com.example.nestedlist.databinding.ItemRecommSkillsDefaultBinding
 import com.example.nestedlist.utils.StartSnapHelper
 
 /**
  * @author Perry Lance
  * @since 2021-04-25 Created
  */
-class RecommSkillsViewHolder(private val binding: ItemRecommSkillsBinding) :
+class RecommSkillsDefaultViewHolder(private val binding: ItemRecommSkillsDefaultBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    private val skillsInsideAdapter = RecommSkillsInsideAdapter().apply {
+    private val skillsDefaultAdapter = SkillsDefaultAdapter().apply {
         submitList(
             listOf(
-                RecommSkillsInside(
+                SkillsDefault(
                     "1"
                 ),
-                RecommSkillsInside(
+                SkillsDefault(
                     "2"
                 ),
-                RecommSkillsInside(
+                SkillsDefault(
                     "3"
                 )
             )
@@ -39,7 +39,7 @@ class RecommSkillsViewHolder(private val binding: ItemRecommSkillsBinding) :
                 LinearLayoutManager.HORIZONTAL,
                 false
             )
-            adapter = skillsInsideAdapter
+            adapter = skillsDefaultAdapter
             StartSnapHelper().attachToRecyclerView(this)
         }
     }

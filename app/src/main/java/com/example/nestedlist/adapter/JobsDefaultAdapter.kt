@@ -5,14 +5,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nestedlist.data.Jobs
+import com.example.nestedlist.data.JobsDefault
 import com.example.nestedlist.databinding.ItemJobsDefaultBinding
 
 /**
  * @author Perry Lance
  * @since 2022-04-16 Created
  */
-class JobsDefaultAdapter : ListAdapter<Jobs, JobsDefaultAdapter.ViewHolder>(
+class JobsDefaultAdapter : ListAdapter<JobsDefault, JobsDefaultAdapter.ViewHolder>(
     JobsDefaultDiffCallback()
 ) {
 
@@ -30,17 +30,17 @@ class JobsDefaultAdapter : ListAdapter<Jobs, JobsDefaultAdapter.ViewHolder>(
 
         private val context = itemView.context
 
-        fun bind(item: Jobs) = with(binding) {
+        fun bind(item: JobsDefault) = with(binding) {
         }
     }
 
-    class JobsDefaultDiffCallback : DiffUtil.ItemCallback<Jobs>() {
+    class JobsDefaultDiffCallback : DiffUtil.ItemCallback<JobsDefault>() {
 
-        override fun areItemsTheSame(oldItem: Jobs, newItem: Jobs): Boolean {
+        override fun areItemsTheSame(oldItem: JobsDefault, newItem: JobsDefault): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: Jobs, newItem: Jobs): Boolean {
+        override fun areContentsTheSame(oldItem: JobsDefault, newItem: JobsDefault): Boolean {
             return oldItem.id == newItem.id
         }
     }
