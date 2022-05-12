@@ -5,5 +5,5 @@ package com.example.nestedlist.data
  * @since 2022-04-16 Created
  */
 data class JobsDefault(
-    val id: String
+    val id: Int
 )

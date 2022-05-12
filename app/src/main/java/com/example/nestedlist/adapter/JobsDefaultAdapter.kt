@@ -16,6 +16,10 @@ class JobsDefaultAdapter : ListAdapter<JobsDefault, JobsDefaultAdapter.ViewHolde
     JobsDefaultDiffCallback()
 ) {
 
+    override fun getItemViewType(position: Int): Int {
+        return getItem(position).id
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
         ItemJobsDefaultBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )

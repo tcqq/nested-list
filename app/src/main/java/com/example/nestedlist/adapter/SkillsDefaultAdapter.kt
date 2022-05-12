@@ -16,6 +16,10 @@ class SkillsDefaultAdapter : ListAdapter<SkillsDefault, SkillsDefaultAdapter.Vie
     SkillsDefaultDiffCallback()
 ) {
 
+    override fun getItemViewType(position: Int): Int {
+        return getItem(position).id
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
         ItemSkillsDefaultBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )

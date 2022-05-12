@@ -14,30 +14,38 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <FrameLayout
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_weight="1">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name"
-                    android:textAppearance="?attr/textAppearanceBody1" />
-
-            </FrameLayout>
+                android:text="Name"
+                android:textAppearance="?attr/textAppearanceBody1" />
 
         </LinearLayout>
 
         <com.example.nestedlist.utils.NestedScrollableHost
+            android:id="@+id/job"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view"
+                android:id="@+id/jobs_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_jobs_default" />
+
+        </com.example.nestedlist.utils.NestedScrollableHost>
+
+        <com.example.nestedlist.utils.NestedScrollableHost
+            android:id="@+id/skill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/skills_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
