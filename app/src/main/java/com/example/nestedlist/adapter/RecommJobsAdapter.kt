@@ -17,7 +17,7 @@ class RecommJobsAdapter : ListAdapter<RecommJobs, RecommJobsViewHolder>(
 ) {
 
     override fun getItemViewType(position: Int): Int {
-        return getItem(position).id
+        return getItem(position).id.hashCode()
     }
 
     override fun onCreateViewHolder(

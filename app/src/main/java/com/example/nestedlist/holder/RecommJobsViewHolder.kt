@@ -1,6 +1,5 @@
 package com.example.nestedlist.holder
 
-import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
@@ -11,7 +10,6 @@ import com.example.nestedlist.data.JobsDefault
 import com.example.nestedlist.data.RecommJobs
 import com.example.nestedlist.data.SkillsDefault
 import com.example.nestedlist.databinding.ItemRecommJobsBinding
-import com.example.nestedlist.enums.RecommJobType
 
 /**
  * @author Perry Lance
@@ -69,8 +67,8 @@ class RecommJobsViewHolder(private val binding: ItemRecommJobsBinding) :
     fun bind(
         item: RecommJobs
     ) = with(binding) {
-        job.isVisible = item.type == RecommJobType.JOB
-        skill.isGone = item.type == RecommJobType.JOB
+        job.isVisible = item is RecommJobs.Job
+        skill.isVisible = item is RecommJobs.Skill
         title.text = item.title
     }
 }
